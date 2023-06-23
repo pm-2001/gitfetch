@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method = "POST" action = "/" >
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="" class="form-label">Name</label>
+          <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+          <input type="text" class="form-control" name="repo_name" id="repo_name" aria-describedby="helpId" placeholder="">
+            <button> Submit</button>
+        </div>
+    </form>
+    {%for i in user_data%}
+    {{i.full_name}}
+    <br>
+    {%endfor%}
+</body>
+</html>
