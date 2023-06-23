@@ -1,6 +1,6 @@
 import requests
 
-access_token = "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"
+access_token = ""
 
 def user(username):
     url = f"https://api.github.com/users/{username}"
